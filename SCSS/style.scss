@@ -1,6 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
 @import url("https://fonts.cdnfonts.com/css/poppins");
-
+@import "./body";
 $quantity: 10;
 
 section {
@@ -49,6 +49,7 @@ section {
     height: max-content;
     padding-bottom: 0px;
     display: flex;
+
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -100,6 +101,31 @@ section {
     transform: rotateX(-16deg) rotateY(360deg);
   }
 }
+
+@media screen and (max-width: 1279px) {
+  section .textGroup {
+    padding: 30px 30px;
+  }
+  section .textGroup .subText {
+    margin-right: 15px;
+  }
+  section .textGroup h1 {
+    margin-left: 15px;
+    font-size: 12em;
+  }
+  section .textGroup .subText h2 {
+    font-size: 2em;
+  }
+  section .textGroup {
+    bottom: -15%;
+  }
+}
+@media screen and (max-width: 1147px) {
+  section .textGroup h1 {
+    font-size: 10em;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   section .itemContainer {
     width: 160px;
@@ -115,14 +141,21 @@ section {
       }
     }
   }
-  section .textGroup{
-    bottom: -10%;
+  section .textGroup {
+    bottom: 0%;
   }
   section .textGroup h1 {
     text-align: center;
     width: 100%;
     text-shadow: 0 10px 20px #000;
     font-size: 7em;
+    margin: 0;
+  }
+  section .textGroup .subText {
+    max-width: unset;
+    width: 100%;
+    text-align: center;
+    color: #fff;
   }
   section .textGroup .subText p {
     color: #fff;
